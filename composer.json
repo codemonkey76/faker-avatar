@@ -1,0 +1,54 @@
+{
+    "name": "codemonkey76/faker-avatar",
+    "description": "Faker provider to retrieve avatar images",
+    "keywords": [
+        "codemonkey76",
+        "faker-avatar"
+    ],
+    "homepage": "https://github.com/codemonkey76/faker-avatar",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shane Poppleton",
+            "email": "shane@bjja.com.au",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codemonkey76\\FakerAvatar\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codemonkey76\\FakerAvatar\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codemonkey76\\FakerAvatar\\FakerAvatarServiceProvider"
+            ],
+            "aliases": {
+                "FakerAvatar": "Codemonkey76\\FakerAvatar\\FakerAvatarFacade"
+            }
+        }
+    }
+}
